@@ -18,8 +18,9 @@ hint: if space is sett at a moddifier. space is only input in the seearchfield w
 
 ✅ **Arrow key navigation** - Navigate up/down through tabs 
 ✅ **Search tabs** - Type to filter tabs by title or URL
-✅ **instantly lauch tabs** with the use of displayed shortcutts
+✅ **instantly lauch or close tabs** with the use of displayed shortcutts
 ✅ **pinn favorite tabs** and instanly launch them
+✅ **displays audible tabs on topp** 
 ✅ **And more**
 
 ## Installation
