@@ -21,8 +21,8 @@ hint: if space is sett at a moddifier. space is only input in the seearchfield w
 
 1. **Download the extension and extract the extention**
 
-2. **Open Edge Extensions**
-   - Go to `edge://extensions/`
+2. **Open browser Extensions**
+   - Go to `edge://extensions/` `chrome://extensions/` etc
    - Enable **Developer mode** (toggle in bottom-left)
 
 3. **Load the extension**
@@ -32,7 +32,7 @@ hint: if space is sett at a moddifier. space is only input in the seearchfield w
 
 4. **Set up keyboard shortcut (optional)**
    - go the the settings page where you can read about and configgure the keys as you wish
-   - the toggle list shortcutt can only be sett in the browser extentions tab (edge://extensions/ chrome://extensions/ etc)
+   - the toggle list shortcutt can only be sett in the browser extentions tab (`edge://extensions/` `chrome://extensions/` etc)
    - here you can also sett it to global if you want to be able to launch the list from outside of the browser
 
 
