@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tab Manager X - Settings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .page-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .container {
+            flex: 1;
+            margin-top: -65px;
+
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 1200px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .sidebar {
+            flex: 0 0 280px;
+            position: sticky;
+            top: 20px;
+        }
+
+        @media (max-width: 968px) {
+            .page-wrapper { flex-direction: column; }
+            .sidebar { flex: 1; width: 100%; position: static; order: 2; }
+            .container { order: 1; }
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a202c;
+            margin-bottom: 10px;
+            font-size: 28px;
+            font-weight: 400;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .extension-description {
+            flex: 0 0 350px;
+            padding: 20px;
+            max-width: 300px;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            margin-top: 20px;
+        }
+
+        .extension-description p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .extension-description p:last-child {
+            margin-bottom: 0;
+        }
+
+        p { color: #718096; margin-bottom: 30px; }
+
+        .setting-group { margin-bottom: 10px; }
+        .section { margin-bottom: 25px; }
+
+        .sections-wrapper {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .sections-wrapper .section {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 968px) {
+            .sections-wrapper {
+                flex-direction: column;
+            }
+            .sections-wrapper .section {
+                margin-bottom: 25px;
+            }
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .modifier-keys-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .shortcuts-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .howto-section {
+            flex: 1;
+        }
+
+        .checkbox-with-howto {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 968px) {
+            .checkbox-with-howto {
+                flex-direction: column;
+            }
+            .extension-description {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .modifier-keys-grid,
+            .shortcuts-grid { grid-template-columns: 1fr !important; }
+            .checkbox-section { margin-top: -25px; min-width: 0; width: 100%; }
+        }
+
+        .modifier-key-item { flex: 1; }
+        .modifier-key-item label { font-size: 13px; }
+
+        label {
+            margin-left: 5px;
+            display: block;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 8px;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        select:focus { outline: none; border-color: #667eea; }
+
+        .description {
+            margin-top: 2px;
+            font-size: 12px;
+            color: #718096;
+        }
+
+        .key-recorder {
+            display: flex;
+            gap: 8px;
+            align-items: stretch;
+        }
+
+        .key-recorder input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            background: #f7fafc;
+            cursor: default;
+        }
+
+        .modifier-key-item .key-recorder input {
+            padding: 10px 5px;
+            font-size: 13px;
+        }
+
+        .key-recorder input:focus { outline: none; border-color: #667eea; }
+
+        .record-button,
+        .clear-button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .modifier-key-item .record-button,
+        .modifier-key-item .clear-button {
+            padding: 10px 12px;
+            font-size: 12px;
+        }
+
+        .record-button {
+            background: #48bb78;
+            color: white;
+        }
+
+        .record-button:hover { background: #38a169; }
+
+        .record-button.recording {
+            background: #f56565;
+            animation: pulse-red 1s ease-in-out infinite;
+        }
+
+        @keyframes pulse-red {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .clear-button {
+            background: #e2e8f0;
+            color: #2d3748;
+        }
+
+        .clear-button:hover { background: #cbd5e0; }
+
+        .recording-status {
+            font-size: 12px;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .example {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 24px;
+            max-width: 900px;
+        }
+
+        .example-title {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .key-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+            font-size: 13px;
+            margin: 0 2px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+        }
+
+        .shortcuts-table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .shortcuts-table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .shortcuts-table th {
+            padding: 5px 10px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .shortcuts-table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+        .shortcuts-table tbody tr {
+            border-bottom: 1px solid #e2e8f0;
+            transition: background-color 0.15s;
+        }
+
+        .shortcuts-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .shortcuts-table tbody tr:hover {
+            background-color: #f7fafc;
+        }
+
+        .shortcuts-table td {
+            padding: 7px 16px;
+            font-size: 14px;
+        }
+
+        .shortcuts-table td:first-child {
+            font-weight: 600;
+            color: #2d3748;
+            width: 100px;
+        }
+
+        .shortcuts-table td:nth-child(2) {
+            white-space: nowrap;
+            width: 100px;
+        }
+
+        .shortcuts-table td:last-child {
+            color: #4a5568;
+             width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+            <div class="description">
+
+            </div>
+            <div class="checkbox-with-howto">
+                <div class="extension-description">
+                    <h2>Blue tabs</h2>
+                    <p>An efficiency-focused tab manager with integrated keyboard navigation provides a fast experience.
+                        All shortcuts are fully customizable, simply record your preferred keys below.
+                         Navigate with arrow keys or instantly target specific tabs using the assigned letter shortcuts (A-R)
+                          for quick switching and closing.
+                </div>
+                <div class="howto-section">
+                    <div class="example">
+                        <table class="shortcuts-table">
+                            <thead>
+                                <tr>
+                                    <th>Key Names</th>
+                                    <th>Keys</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Extention shortcut</td>
+                                    <td><span class="key-badge" id="extensionShortcut">Ctrl+Shift+X</span></td>
+                                    <td>Open Blue tabs switcher</td>
+                                </tr>
+                                <tr>
+                                    <td>Switch + shortcut</td>
+                                    <td><span class="key-badge" id="exampleSwitch2">Space</span> + <span class="key-badge">A</span></td>
+                                    <td>Switch to tab 1 (works for A-R keys)</td>
+                                </tr>
+                                <tr>
+                                    <td>Close + shortcut</td>
+                                    <td><span class="key-badge" id="exampleClose3">Shift</span> + <span class="key-badge">A</span></td>
+                                    <td>Close tab 1 (works for A-R keys)</td>
+                                </tr>
+                                <tr>
+                                    <td>Close + Confirm</td>
+                                    <td><span class="key-badge" id="exampleClose4">Shift</span> + <span class="key-badge" id="exampleConfirm3">Enter</span></td>
+                                    <td>Close the currently highlighted tab</td>
+                                </tr>
+                                <tr>
+                                    <td>Confirm</td>
+                                    <td><span class="key-badge" id="exampleConfirm4">Enter</span></td>
+                                    <td>Switch to selected tab or restore closed tab</td>
+                                </tr>
+                                <tr>
+                                    <td>Recently closed</td>
+                                    <td><span class="key-badge" id="exampleRecentlyClosed2">Tab</span></td>
+                                    <td>Jump to recently closed tabs section</td>
+                                </tr>
+                                <tr>
+                                    <td>Settings</td>
+                                    <td><span class="key-badge" id="exampleSettings2">Ctrl+Alt+S</span></td>
+                                    <td>Open this settings page</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="sections-wrapper">
+                <div class="section">
+                    <div class="section-title">Configure Main Keys </div>
+                    
+                    <div class="modifier-keys-grid">
+                        <div class="modifier-key-item">
+                            <label for="closeModifier">Close</label>
+                            <div class="key-recorder">
+                                <input type="text" id="closeModifierDisplay" readonly placeholder="Record...">
+                                <button id="recordCloseButton" class="record-button">Record</button>
+                                <button id="clearCloseButton" class="clear-button">Clear</button>
+                            </div>
+                            <div id="recordingCloseStatus" class="recording-status"></div>
+                        </div>
+
+                        <div class="modifier-key-item">
+                            <label for="switchModifier">Switch</label>
+                            <div class="key-recorder">
+                                <input type="text" id="switchModifierDisplay" readonly placeholder="Record...">
+                                <button id="recordSwitchButton" class="record-button">Record</button>
+                                <button id="clearSwitchButton" class="clear-button">Clear</button>
+                            </div>
+                            <div id="recordingSwitchStatus" class="recording-status"></div>
+                        </div>
+
+                        <div class="modifier-key-item">
+                            <label for="confirmKey">Confirm</label>
+                            <div class="key-recorder">
+                                <input type="text" id="confirmKeyDisplay" readonly placeholder="Record...">
+                                <button id="recordConfirmButton" class="record-button">Record</button>
+                                <button id="clearConfirmButton" class="clear-button">Clear</button>
+                            </div>
+                            <div id="recordingConfirmStatus" class="recording-status"></div>
+                        </div>
+
+                        <div class="modifier-key-item">
+                            <label>Extension shortcut</label>
+                            <button id="openChromeShortcuts" class="record-button" style="width: 100%; padding: 12px; background: #667eea;">
+                                Open Extension Shortcuts
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">Other Settings</div>
+
+                    <div class="shortcuts-grid">
+                        <div class="modifier-key-item">
+                            <label for="recentlyClosedKey">Recently closed</label>
+                            <div class="key-recorder">
+                                <input type="text" id="recentlyClosedKeyDisplay" readonly placeholder="Record...">
+                                <button id="recordRecentlyClosedButton" class="record-button">Record</button>
+                                <button id="clearRecentlyClosedButton" class="clear-button">Clear</button>
+                            </div>
+                            <div id="recordingRecentlyClosedStatus" class="recording-status"></div>
+                        </div>
+
+                        <div class="modifier-key-item">
+                            <label for="settingsKey">Settings</label>
+                            <div class="key-recorder">
+                                <input type="text" id="settingsKeyDisplay" readonly placeholder="Record...">
+                                <button id="recordSettingsButton" class="record-button">Record</button>
+                                <button id="clearSettingsButton" class="clear-button">Clear</button>
+                            </div>
+                            <div id="recordingSettingsStatus" class="recording-status"></div>
+                        </div>
+
+                        <div class="modifier-key-item">
+                            <label>
+                                <input type="checkbox" id="showInstructions" checked>
+                                Show shortcuts
+                            </label>
+                            <div class="description">
+                                Display keyboard shortcuts hint below search box
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Blue tabs",
+  "version": "1.0",
+  "description": "A custom tab switcher popup with fast navigation",
+  "permissions": [
+    "tabs",
+    "storage",
+    "sessions"
+  ],
+  "commands": {
+    "toggle-switcher": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+X"
+      },
+      "description": "Toggle Blue tabs"
+    }
+  },
+  "options_page": "settings.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
