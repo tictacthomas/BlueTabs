@@ -1,22 +1,22 @@
-# Custom Tab Switcher with Arrow Keys
+# Custom Tab Switcher focused on efficiency inspired by the microsoft edge tab view
 
-A Microsoft Edge extension that provides a **working tab switcher with full arrow key navigation**.
+works in all browsers that suport chrome extentions
 
 This replaces Edge's buggy built-in tab view (Ctrl+Shift+A) with a custom popup that actually works.
 
+the extention whil soon be available in the chrome extention web store too
+
 ## Features
 
-✅ **Arrow key navigation** - Navigate up/down through tabs (actually works!)
+✅ **Arrow key navigation** - Navigate up/down through tabs 
 ✅ **Search tabs** - Type to filter tabs by title or URL
-✅ **Keyboard shortcuts** - Multiple ways to navigate
-✅ **Close tabs** - Ctrl+W to close selected tab
-✅ **Visual feedback** - Selected tab is highlighted
+✅ **instantly lauch tabs**
+✅ **pinn favorite tabs**
 ✅ **Fast and responsive** - Instant navigation
 
 ## Installation
 
-1. **Download the extension**
-   - Extract the `tab-switcher` folder
+1. **Download the extension and extract
 
 2. **Open Edge Extensions**
    - Go to `edge://extensions/`
@@ -29,8 +29,8 @@ This replaces Edge's buggy built-in tab view (Ctrl+Shift+A) with a custom popup 
 
 4. **Set up keyboard shortcut (optional)**
    - In `edge://extensions/`, click **Keyboard shortcuts** (bottom of page)
-   - Find "Custom Tab Switcher"
-   - Set your preferred shortcut (default is Ctrl+Shift+Space)
+   - Find "Blue tabs"
+   - Set your preferred shortcut (default is Ctrl+Shift+x)
 
 ## Usage
 
