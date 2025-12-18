@@ -1,4 +1,6 @@
-# Custom Tab Switcher inspired by the microsoft edge tab view. with manny of the same features and some new once to increase efficiency
+# Blue Tabs 
+**A customizable Tab Switcher inspired by the microsoft edge tab view. with manny of the same features and some new once to increase efficiency**
+
 
 works in all browsers that suport chrome extentions
 the extention whil soon be available in the chrome extention web store too
