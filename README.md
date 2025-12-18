@@ -1,8 +1,11 @@
 # Custom Tab Switcher inspired by the microsoft edge tab view. with manny of the same features and some new once to increase efficiency
 
 works in all browsers that suport chrome extentions
-
 the extention whil soon be available in the chrome extention web store too
+
+by default press ctrl+shift+x to launch the extention 
+the main functions are intuitive and similar to the built in microsoft edge tab view. 
+adittional functions are best understood by going to the extention options through the browser UI or pressing ctrl+alt+s while the extention is active
 
 hint: if space is sett at a moddifier. space is only input in the seearchfield when released with no other keys pressed
 
