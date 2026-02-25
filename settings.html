@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Tab Manager X - Settings</title>
-    <style>
+    <title>Blue Tabs - Settings</title>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -12,122 +12,116 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            padding: 40px;
+            padding: 10px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
 
         .page-wrapper {
+           /*  transform: scale(1.25); Scale by 25% 
+            transform-origin: top center; 
+            width: calc(100% / 1.25);
+            */
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            gap: 40px;
+            gap: 10px;
             align-items: flex-start;
         }
 
         .container {
+     
             flex: 1;
-            margin-top: -65px;
-
+            margin-top: 0;
             background: white;
-            padding: 40px;
-            border-radius: 12px;
+            padding: 12px 15px;
+            border-radius: 10px;
             max-width: 1200px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
-
-        .sidebar {
-            flex: 0 0 280px;
-            position: sticky;
-            top: 20px;
-        }
-
-        @media (max-width: 968px) {
-            .page-wrapper { flex-direction: column; }
-            .sidebar { flex: 1; width: 100%; position: static; order: 2; }
-            .container { order: 1; }
-        }
-
-        h1 {
-            text-align: center;
-            color: #1a202c;
-            margin-bottom: 10px;
-            font-size: 28px;
-            font-weight: 400;
-        }
-
+        
         h2 {
             color: #667eea;
-            margin-bottom: 15px;
-            font-size: 30px;
+            margin-bottom: 10px;
+            font-size: 22px;
             font-weight: 600;
         }
 
-        .extension-description {
-            flex: 0 0 350px;
-            padding: 20px;
-            max-width: 300px;
-            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-            border-radius: 12px;
-            border-left: 4px solid #667eea;
-            margin-top: 20px;
-        }
-
-        .extension-description p {
+        p {
             color: #4a5568;
-            line-height: 1.6;
-            margin-bottom: 12px;
-            font-size: 14px;
+            line-height: 1.4;
+            font-size: 10px;
         }
 
-        .extension-description p:last-child {
-            margin-bottom: 0;
+        .extension-description {
+            flex: 0 0 200px;
+            padding: 10px;
+            max-width: 200px;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
         }
 
-        p { color: #718096; margin-bottom: 30px; }
-
-        .setting-group { margin-bottom: 10px; }
-        .section { margin-bottom: 25px; }
+        .setting-group { margin-bottom: 4px; }
+        .section { margin-bottom: 8px; }
 
         .sections-wrapper {
             display: flex;
-            gap: 30px;
-            margin-bottom: 25px;
+            gap: 15px;
+            margin-bottom: 8px;
         }
 
-        .sections-wrapper .section {
+        .sections-wrapper .section-left,
+        .sections-wrapper .section-right {
             flex: 1;
             margin-bottom: 0;
         }
 
-        @media (max-width: 968px) {
+        @media (max-width: 1300px) {
             .sections-wrapper {
                 flex-direction: column;
             }
-            .sections-wrapper .section {
+            .sections-wrapper .section-left,
+            .sections-wrapper .section-right {
                 margin-bottom: 25px;
             }
+       .modifier-keys-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr)!important;
+            gap: 6px;
+            margin-bottom: -23px;
+        }
+           .description {
+            margin-bottom: 20px!important;
+          
         }
 
+
+
+        
+          
+        }
+   
+
         .section-title {
-            font-size: 18px;
+            font-size: 13px;
             font-weight: 600;
             color: #1a202c;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e2e8f0;
+            margin-bottom: 6px;
+            padding-bottom: 4px;
+    
         }
 
         .modifier-keys-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            gap: 6px;
         }
         
         .shortcuts-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
+            grid-template-columns: 100%;
+            gap: 6px;
         }
 
         .howto-section {
@@ -136,122 +130,99 @@
 
         .checkbox-with-howto {
             display: flex;
-            gap: 40px;
+            gap: 15px;
             align-items: flex-start;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
-
-        @media (max-width: 968px) {
-            .checkbox-with-howto {
-                flex-direction: column;
-            }
-            .extension-description {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .modifier-keys-grid,
-            .shortcuts-grid { grid-template-columns: 1fr !important; }
-            .checkbox-section { margin-top: -25px; min-width: 0; width: 100%; }
-        }
-
-        .modifier-key-item { flex: 1; }
-        .modifier-key-item label { font-size: 13px; }
 
         label {
-            margin-left: 5px;
+            margin-left: 3px;
             display: block;
             font-weight: 600;
             color: #2d3748;
-            margin-bottom: 5px;
-            font-size: 14px;
+            margin-bottom: 2px;
+            font-size: 11px;
+        }
+
+        .settings-title{
+         text-align: center;
+         font-size: 25px;
+         margin-bottom: 5px;
+        color: #667eea;
+
+    
+        }
+
+        .split{
+            margin-top: 2px;
+            margin-bottom: 7px;
+            border-bottom: 2px solid #e2e8f0;
         }
 
         input[type="checkbox"] {
-            margin-right: 8px;
+            margin-right: 4px;
             cursor: pointer;
-            width: 18px;
-            height: 18px;
+            width: 14px;
+            height: 14px;
         }
-
-        select {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            font-size: 14px;
-            background: white;
-            cursor: pointer;
-            transition: border-color 0.2s;
-        }
-
-        select:focus { outline: none; border-color: #667eea; }
 
         .description {
-            margin-top: 2px;
-            font-size: 12px;
+            margin-top: 1px;
+            font-size: 9px;
             color: #718096;
         }
 
         .key-recorder {
             display: flex;
-            gap: 8px;
+            gap: 4px;
             align-items: stretch;
         }
 
         .key-recorder input {
             flex: 1;
-            padding: 12px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            font-size: 14px;
+            padding: 5px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            font-size: 10px;
             background: #f7fafc;
             cursor: default;
         }
 
         .modifier-key-item .key-recorder input {
-            padding: 10px 5px;
-            font-size: 13px;
+            padding: 4px 3px;
+            font-size: 10px;
         }
 
         .key-recorder input:focus { outline: none; border-color: #667eea; }
 
         .record-button,
-        .clear-button {
-            padding: 12px 20px;
+        .clear-button,
+        .engine-button {
+            padding: 5px 8px;
             border: none;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 400;
             cursor: pointer;
             transition: all 0.2s;
             white-space: nowrap;
-        }
-
-        .modifier-key-item .record-button,
-        .modifier-key-item .clear-button {
-            padding: 10px 12px;
-            font-size: 12px;
         }
 
         .record-button {
             background: #48bb78;
             color: white;
         }
+        .engine-button{
+            color: white;
+            background-color: #1d4ed8;
+        }
 
         .record-button:hover { background: #38a169; }
 
         .record-button.recording {
             background: #f56565;
-            animation: pulse-red 1s ease-in-out infinite;
+            animation: pulse 1s ease-in-out infinite;
         }
-
-        @keyframes pulse-red {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-
         .clear-button {
             background: #e2e8f0;
             color: #2d3748;
@@ -259,36 +230,42 @@
 
         .clear-button:hover { background: #cbd5e0; }
 
+        .disable-button {
+            background: #f56565;
+            color: white;
+        }
+
+        .disable-button:hover { background: #e53e3e; }
+
+        .disable-button.disabled {
+            background: #48bb78;
+        }
+
+        .disable-button.disabled:hover { background: #38a169; }
+
         .recording-status {
-            font-size: 12px;
+            font-size: 10px;
             color: #667eea;
-            font-weight: 600;
+            font-weight: 100;
         }
 
         .example {
             margin-left: auto;
             margin-right: auto;
-            margin-top: 24px;
+            margin-top: 10px;
             max-width: 900px;
-        }
-
-        .example-title {
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 16px;
-            font-size: 16px;
         }
 
         .key-badge {
             display: inline-block;
             background: #667eea;
             color: white;
-            padding: 4px 10px;
-            border-radius: 6px;
+            padding: 2px 6px;
+            border-radius: 4px;
             font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
-            font-size: 13px;
+            font-size: 11px;
             margin: 0 2px;
-            font-weight: 600;
+            font-weight: 400;
             box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
         }
 
@@ -298,7 +275,7 @@
             border-collapse: separate;
             border-spacing: 0;
             background: white;
-            border-radius: 8px;
+            border-radius: 6px;
             overflow: hidden;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
@@ -309,18 +286,18 @@
             color: white;
         }
 
-        .shortcuts-table th {
-            padding: 5px 10px;
+        .shortcuts-table th,.engine-badge {
+            padding: 4px 8px;
             text-align: left;
-            font-size: 12px;
-            font-weight: 600;
+            font-size: 10px;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .shortcuts-table tr:nth-child(even) {
-  background-color: #f2f2f2; /* Light gray for even rows */
-}
+        background-color: #f2f2f2; /* Light gray for even rows */
+        }
 
         .shortcuts-table tbody tr {
             border-bottom: 1px solid #e2e8f0;
@@ -336,43 +313,1049 @@
         }
 
         .shortcuts-table td {
-            padding: 7px 16px;
-            font-size: 14px;
+            padding: 4px 10px;
+            font-size: 11px;
         }
 
         .shortcuts-table td:first-child {
             font-weight: 600;
             color: #2d3748;
-            width: 100px;
+            width: 90px;
         }
 
         .shortcuts-table td:nth-child(2) {
             white-space: nowrap;
-            width: 100px;
+            width: 90px;
         }
 
         .shortcuts-table td:last-child {
             color: #4a5568;
-             width: 200px;
+             width: 180px;
+        }
+
+        /* Engine Manager Modal Styles */
+        .engine-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .engine-modal.show {
+            display: flex;
+        }
+
+        .engine-modal-content {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+            width: 90%;
+            max-width: 900px;
+            max-height: 85vh;
+            overflow: hidden;
+        }
+
+        .engine-modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .engine-modal-header h2 {
+            margin: 0;
+            color: white;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .engine-close-btn , .settings-modal-close{
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 0px 8px;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .engine-close-btn:hover,.settings-modal-close:hover {
+            background: rgba(255, 255, 255, 1);
+            color: #538cff;
+        }
+
+        .engine-modal-body {
+            padding: 20px;
+            overflow-y: auto;
+            max-height: calc(85vh - 120px);
+        }
+
+        .engine-add-section {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 2px dashed #0ea5e9;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .engine-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr 60px 1fr 1fr;
+            gap: 4px;
+            align-items: end;
+            margin-top: 10px;
+        }
+
+        .engine-form input {
+            padding: 8px;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 13px;
+            transition: border-color 0.2s;
+            width: 100%;
+        }
+
+        .engine-form input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .engine-form label {
+            font-size: 10px;
+            font-weight: 600;
+            color: #475569;
+            margin: 0 0 2px 0;
+            display: block;
+        }
+
+        .engine-form > div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .engine-add-btn {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+        }
+
+        .engine-add-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .engines-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .engine-item {
+            background: white;
+            border: 2px solid #f1f5f9;
+            border-radius: 10px;
+            padding: 14px 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .engine-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .engine-item:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+        }
+
+        .engine-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .engine-info {
+            flex: 1;
+        }
+
+        .engine-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .engine-badge.default {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+        }
+
+        .engine-badge.modified {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+        }
+
+        .engine-badge.custom {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+        }
+
+        .engine-badge.disabled {
+            background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+            color: white;
+        }
+
+        .default-engine {
+            border-color: #dbeafe;
+        }
+
+        .default-engine::before {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+
+        .custom-engine {
+            border-color: #dcfce7;
+        }
+
+        .custom-engine::before {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .engine-disable-btn {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .engine-disable-btn:hover {
+            background: #fee2e2;
+            border-color: #fca5a5;
+        }
+
+        .engine-reset-btn {
+            background: #fff7ed;
+            color: #ea580c;
+            border: 1px solid #fed7aa;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .engine-reset-btn:hover {
+            background: #ffedd5;
+            border-color: #fdba74;
+        }
+
+        .disabled-engines-section {
+            margin-top: 16px;
+        }
+
+        .disabled-engine-item {
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            opacity: 0.8;
+        }
+
+        .engine-shortcut {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .engine-url {
+            font-size: 12px;
+            color: #64748b;
+            word-break: break-all;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        }
+
+        .engine-actions {
+            display: flex;
+            gap: 6px;
+        }
+
+        .engine-edit-btn, .engine-delete-btn, .record-modifier-btn,
+        .clear-modifier-btn  {
+            padding: 6px 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 100;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .engine-edit-btn {
+            background: #f8fafc;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+        }
+
+        .engine-edit-btn:hover {
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+        }
+
+        .engine-delete-btn {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+
+        .engine-delete-btn:hover {
+            background: #fee2e2;
+            border-color: #fca5a5;
+        }
+
+        .engine-item.editing {
+            background: #f8fafc;
+        }
+
+        .engine-edit-form {
+            display: none;
+            grid-template-columns: calc(50% - 40px) calc(50% - 40px) 70px;
+            gap: 4px;
+            margin-top: 12px;
+            align-items: end;
+        }
+
+        .engine-item.editing .engine-edit-form {
+            display: grid;
+        }
+
+        .engine-edit-form > div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .engine-edit-form label {
+            font-size: 10px;
+            font-weight: 600;
+            color: #475569;
+            margin: 0 0 2px 0;
+            display: block;
+        }
+
+        .engine-edit-form input[type="text"],
+        .engine-edit-form input[type="url"] {
+            padding: 8px;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 13px;
+            width: 100%;
+        }
+
+        .engine-edit-form input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .engine-edit-form .edit-buttons {
+            grid-column: span 3;
+            display: flex;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .engine-edit-form .shift-checkbox {
+            grid-column: span 3;
+            margin-top: 6px;
+        }
+
+        .engine-edit-form .shift-checkbox label {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .engine-edit-form .shift-checkbox input[type="checkbox"] {
+            width: 14px;
+            height: 14px;
+            margin-right: 6px;
+        }
+
+        /* Modifier recording styles */
+        .modifier-input-group {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .modifier-input-group input {
+            flex: 1;
+            min-width: 60px;
+            max-width: 80px;
+        }
+
+
+        .record-modifier-btn {
+            background: linear-gradient(135deg, #667eea 0%, #5a67d8 100%);
+            color: white;
+        }
+
+        .record-modifier-btn:hover {
+            background: linear-gradient(135deg, #5a67d8 0%, #4c51bf 100%);
+        }
+
+        .record-modifier-btn.recording {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            animation: pulse 1s infinite;
+        }
+
+        .clear-modifier-btn {
+            background: #f1f5f9;
+            color: #64748b;
+            border: 1px solid #e2e8f0;
+        }
+
+        .clear-modifier-btn:hover {
+            background: #e2e8f0;
+            color: #475569;
+        }
+
+        .modifier-recording-section {
+            grid-column: span 3;
+            margin-top: 6px;
+        }
+
+        .modifier-recording-section label {
+            display: block;
+            font-size: 11px;
+            color: #64748b;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .engine-edit-form .modifier-recording-section {
+            grid-column: span 3;
+        }
+
+        .url-suffix-section {
+            grid-column: span 3;
+            margin-top: 6px;
+        }
+
+        .url-suffix-section label {
+            display: block;
+            font-size: 11px;
+            color: #64748b;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .url-suffix-section input {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        .url-suffix-section input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .engine-item.editing .engine-info {
+            opacity: 0.5;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #64748b;
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .weather-location-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 12px;
+            background: #f7fafc;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .weather-location-item .prefix {
+            font-family: monospace;
+            font-weight: 600;
+            color: #667eea;
+            min-width: 40px;
+        }
+
+        .weather-location-item .name {
+            flex: 1;
+            font-weight: 500;
+            color: #1a202c;
+        }
+
+        .weather-location-item .coords {
+            font-size: 12px;
+            color: #718096;
+        }
+
+        .weather-location-item .delete-btn {
+            padding: 4px 10px;
+            background: #ef4444;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+    
+
+        .currency-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            background: #f0fdf4;
+            border-radius: 6px;
+            margin: 0 6px 6px 0;
+            border: 1px solid #bbf7d0;
+        }
+
+        .currency-item .currency-code {
+            font-family: monospace;
+            font-weight: 600;
+            color: #16a34a;
+        }
+
+        .currency-item .delete-btn, .translation-target-item .delete-btn,.translation-prefix-item .delete-btn{
+            padding: 2px 6px;
+            background: #ef4444;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+            line-height: 1;
+        }
+
+        .currency-item .delete-btn:hover, .weather-location-item .delete-btn:hover,
+        .translation-target-item .delete-btn:hover,.translation-prefix-item .delete-btn:hover  {
+            background: #850202;
+            color: #ffffff;
+        }
+
+        #currencyList {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .translation-prefix-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            background: #f0f9ff;
+            border-radius: 6px;
+            margin: 0 6px 6px 0;
+            border: 1px solid #bae6fd;
+        }
+
+        .translation-prefix-item .prefix-code {
+            font-family: monospace;
+            font-weight: 600;
+            color: #0369a1;
+        }
+
+        .translation-prefix-item .lang-name {
+            color: #475569;
+            font-size: 12px;
+        }
+    
+        #translationPrefixList, #translationTargetList {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .translation-target-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            background: #fef3c7;
+            border-radius: 6px;
+            margin: 0 6px 6px 0;
+            border: 1px solid #fcd34d;
+        }
+
+        .translation-target-item .lang-flag {
+            font-size: 16px;
+        }
+
+        .translation-target-item .lang-name {
+            font-weight: 500;
+            color: #92400e;
+        }
+
+   
+
+        /* Generic Settings Modal (for Weather, Currency, Translation) */
+        .settings-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .settings-modal.show {
+            display: flex;
+        }
+
+        .settings-modal-content {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+            width: 90%;
+            max-width: 700px;
+            max-height: 85vh;
+            overflow: hidden;
+        }
+
+        .settings-modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .settings-modal-header.weather {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+
+        .settings-modal-header.currency {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .settings-modal-header.translation {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+
+        .settings-modal-header.general {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+        }
+
+        .settings-modal-header h2 {
+            margin: 0;
+            color: white;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+   
+
+        .settings-modal-body {
+            padding: 20px;
+            overflow-y: auto;
+            max-height: calc(85vh - 80px);
+        }
+
+        .settings-button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 400;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .settings-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .settings-button.weather {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+
+        .settings-button.currency {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .settings-button.translation {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+
+        .settings-button.compact {
+            padding: 6px 8px;
+            font-size: 11px;
+        }
+
+        /* Hints Section Styles */
+        .hints-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 900px) {
+            .hints-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .hint-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .hint-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+            border-color: #667eea;
+        }
+
+        .hint-card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .hint-card-icon {
+            font-size: 18px;
+        }
+
+        .hint-card-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #1a202c;
+        }
+
+        .hint-card-description {
+            font-size: 10px;
+            color: #64748b;
+            line-height: 1.4;
+            margin-bottom: 8px;
+            min-height: 28px;
+        }
+
+        .hint-learn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 9px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .hint-learn-more:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Help Modal Styles */
+        .help-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1001;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .help-modal.show {
+            display: flex;
+        }
+
+        .help-modal-content {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+            width: 90%;
+            max-width: 550px;
+            max-height: 80vh;
+            overflow: hidden;
+        }
+
+        .help-modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .help-modal-header h3 {
+            margin: 0;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .help-modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0 6px;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .help-modal-close:hover {
+            background: rgba(255, 255, 255, 1);
+            color: #667eea;
+        }
+
+        .help-modal-body {
+            padding: 20px;
+            overflow-y: auto;
+            max-height: calc(80vh - 70px);
+        }
+
+        .help-section {
+            margin-bottom: 16px;
+        }
+
+        .help-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .help-section-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .help-section-content {
+            font-size: 12px;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .help-section-content ul {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+
+        .help-section-content li {
+            margin-bottom: 6px;
+        }
+
+        .help-key {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 10px;
+            font-weight: 600;
+            margin: 0 2px;
+        }
+
+        .help-example {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 10px 12px;
+            margin: 10px 0;
+            font-size: 11px;
+        }
+
+        .help-example-label {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 4px;
+        }
+
+        .help-tip {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 1px solid #fbbf24;
+            border-radius: 6px;
+            padding: 10px 12px;
+            margin-top: 12px;
+            font-size: 11px;
+            color: #92400e;
+        }
+
+        .help-tip strong {
+            color: #b45309;
+        }
+
+        /* Collapsible Settings Section */
+        .settings-title.collapsible {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.2s ease;
+            padding: 8px 15px;
+            margin: 0 -15px;
+            border-radius: 8px;
+        }
+
+        .settings-title.collapsible:hover {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        }
+
+        .settings-title .collapse-icon {
+            font-size: 14px;
+            transition: transform 0.3s ease;
+            color: #667eea;
+        }
+
+        .settings-title.collapsed .collapse-icon {
+            transform: rotate(-90deg);
+        }
+
+        .collapsible-content {
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+            max-height: 2000px;
+            opacity: 1;
+        }
+
+        .collapsible-content.hidden {
+            max-height: 0;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .settings-title .click-hint {
+            font-size: 10px;
+            font-weight: 400;
+            color: #94a3b8;
+            margin-left: 8px;
+        }
+
+        .settings-title:hover .click-hint {
+            color: #667eea;
         }
     </style>
 </head>
 <body>
     <div class="page-wrapper">
         <div class="container">
-            <div class="description">
-
-            </div>
             <div class="checkbox-with-howto">
                 <div class="extension-description">
-                    <h2>Blue tabs</h2>
-                    <p>An efficiency-focused tab manager with integrated keyboard navigation provides a fast experience.
-                        All shortcuts are fully customizable, simply record your preferred keys below.
-                         Navigate with arrow keys or instantly target specific tabs using the assigned letter shortcuts (A-R)
-                          for quick switching and closing.
+                    <h2 style="font-size: 16px; margin-bottom: 6px;">Blue tabs</h2>
+                    <p style="font-size: 11px; margin-bottom: 0;">An efficiency-focused tab manager with integrated keyboard navigation.
+                         All shortcuts are fully customizable. Navigate with arrow keys or use letter shortcuts (A-R) for quick switching and closing.
+                        if you still prefer using the mouse that is fully supported to
+                        
+                        </p>
                 </div>
                 <div class="howto-section">
-                    <div class="example">
+                    <div class="example" style="margin-top: 0;">
                         <table class="shortcuts-table">
                             <thead>
                                 <tr>
@@ -383,54 +1366,180 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Extention shortcut</td>
-                                    <td><span class="key-badge" id="extensionShortcut">Ctrl+Shift+X</span></td>
+                                    <td>Extension shortcut</td>
+                                    <td><span class="key-badge" id="extensionShortcut"></span></td>
                                     <td>Open Blue tabs switcher</td>
                                 </tr>
                                 <tr>
-                                    <td>Switch + shortcut</td>
-                                    <td><span class="key-badge" id="exampleSwitch2">Space</span> + <span class="key-badge">A</span></td>
-                                    <td>Switch to tab 1 (works for A-R keys)</td>
+                                    <td>Target + shortcut</td>
+                                    <td><span class="key-badge" id="exampleTarget2">Alt+T</span> + <span class="key-badge">A</span></td>
+                                    <td>Switch to tab 1 (A-R keys)</td>
                                 </tr>
                                 <tr>
                                     <td>Close + shortcut</td>
                                     <td><span class="key-badge" id="exampleClose3">Shift</span> + <span class="key-badge">A</span></td>
-                                    <td>Close tab 1 (works for A-R keys)</td>
+                                    <td>Close tab 1 (A-R keys)</td>
                                 </tr>
                                 <tr>
-                                    <td>Close + Confirm</td>
-                                    <td><span class="key-badge" id="exampleClose4">Shift</span> + <span class="key-badge" id="exampleConfirm3">Enter</span></td>
-                                    <td>Close the currently highlighted tab</td>
+                                    <td>Target + Close</td>
+                                    <td><span class="key-badge" id="exampleTarget3">Alt</span> + <span class="key-badge" id="exampleClose4">Shift</span></td>
+                                    <td>Close highlighted tab</td>
                                 </tr>
                                 <tr>
-                                    <td>Confirm</td>
-                                    <td><span class="key-badge" id="exampleConfirm4">Enter</span></td>
-                                    <td>Switch to selected tab or restore closed tab</td>
+                                    <td>Target (release)</td>
+                                    <td><span class="key-badge" id="exampleTarget4">Alt</span></td>
+                                    <td>Switch to highlighted tab</td>
                                 </tr>
-                                <tr>
+                                <tr id="recentlyClosedRow">
                                     <td>Recently closed</td>
                                     <td><span class="key-badge" id="exampleRecentlyClosed2">Tab</span></td>
-                                    <td>Jump to recently closed tabs section</td>
+                                    <td>Jump to closed tabs</td>
                                 </tr>
                                 <tr>
-                                    <td>Settings</td>
-                                    <td><span class="key-badge" id="exampleSettings2">Ctrl+Alt+S</span></td>
-                                    <td>Open this settings page</td>
+                                    <td>Engine + shortcut</td>
+                                    <td><span class="key-badge" id="exampleEngine2">F21</span> + <span class="key-badge">I</span></td>
+                                    <td>Search with engine</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+                    
                 </div>
             </div>
-            <br>
+                 <div class="settings-title"> Hints and explanations </div>
+          <div class="split"></div>
 
+          <!-- Hints Grid -->
+          <div class="hints-grid">
+              <!-- Hotkeys Card -->
+              <div class="hint-card">
+                  <div class="hint-card-header">
+                      <span class="hint-card-icon">⌨️</span>
+                      <span class="hint-card-title">Hotkeys</span>
+                  </div>
+                  <div class="hint-card-description">Quick keyboard shortcuts to switch between tabs using letter keys (A-R).</div>
+                  <button class="hint-learn-more" data-modal="hotkeysHelpModal">Learn more →</button>
+              </div>
+
+              <!-- Favorites Card -->
+              <div class="hint-card">
+                  <div class="hint-card-header">
+                      <span class="hint-card-icon">⭐</span>
+                      <span class="hint-card-title">Favorites</span>
+                  </div>
+                  <div class="hint-card-description">Pin your most-used pages for instant access with number keys (1-9).</div>
+                  <button class="hint-learn-more" data-modal="favoritesHelpModal">Learn more →</button>
+              </div>
+
+                 <div class="hint-card">
+                  <div class="hint-card-header">
+                      <span class="hint-card-icon">🔥</span>
+                      <span class="hint-card-title">Hot pages</span>
+                  </div>
+                  <div class="hint-card-description">Pin your most-used pages for instant access with number keys (1-9).</div>
+                  <button class="hint-learn-more" data-modal="favoritesHelpModal">Learn more →</button>
+              </div>
+
+         
+
+                      <div class="hint-card">
+                  <div class="hint-card-header">
+                      <span class="hint-card-icon">🎯</span>
+                      <span class="hint-card-title">Instant jump</span>
+                  </div>
+                  <div class="hint-card-description">Jump directly to a tab using the engine key and the first letter of the domain</div>
+                  <button class="hint-learn-more" data-modal="favoritesHelpModal">Learn more →</button>
+              </div>
+
+              <!-- Search Field Card -->
+              <div class="hint-card">
+                  <div class="hint-card-header">
+                      <span class="hint-card-icon">🔍</span>
+                      <span class="hint-card-title">Search Field</span>
+                  </div>
+                  <div class="hint-card-description">Filter tabs, trigger web search, or access special services with prefixes.</div>
+                  <button class="hint-learn-more" data-modal="searchHelpModal">Learn more →</button>
+              </div>
+
+              <!-- Engines Card -->
+              <div class="hint-card">
+                  <div class="hint-card-header">
+                      <span class="hint-card-icon">🚀</span>
+                      <span class="hint-card-title">Search Engines</span>
+                  </div>
+                  <div class="hint-card-description">Search with your favorite engines using keyboard shortcuts.</div>
+                  <button class="hint-learn-more" data-modal="enginesHelpModal">Learn more →</button>
+              </div>
+
+   
+
+              <!-- Services Card -->
+              <div class="hint-card">
+                  <div class="hint-card-header">
+                      <span class="hint-card-icon">🛠️</span>
+                      <span class="hint-card-title">Services</span>
+                  </div>
+                  <div class="hint-card-description">Built-in weather, currency, translation, and definition lookups.</div>
+                  <button class="hint-learn-more" data-modal="servicesHelpModal">Learn more →</button>
+              </div>
+
+              <!-- AI Integration Card -->
+              <div class="hint-card">
+                  <div class="hint-card-header">
+                      <span class="hint-card-icon">🤖</span>
+                      <span class="hint-card-title"> <b>Optional</b> AI Integration </span>
+                  </div>
+                  <div class="hint-card-description">Get instant AI answers by ending your query with a question mark.</div>
+                  <button class="hint-learn-more" data-modal="aiHelpModal">Learn more →</button>
+              </div>
+
+              <!-- Search History Card -->
+              <div class="hint-card">
+                  <div class="hint-card-header">
+                      <span class="hint-card-icon">📜</span>
+                      <span class="hint-card-title"><b>Optional</b> Search History</span>
+                  </div>
+                  <div class="hint-card-description">Quickly recall your recent searches with a simple key press.</div>
+                  <button class="hint-learn-more" data-modal="historyHelpModal">Learn more →</button>
+              </div>
+
+                     <div class="hint-card">
+                  <div class="hint-card-header">
+                      <span class="hint-card-icon">🖱️</span>
+                      <span class="hint-card-title">Mouse</span>
+                  </div>
+                  <div class="hint-card-description">There is full mouse support</div>
+                  <button class="hint-learn-more" data-modal="favoritesHelpModal">Learn more →</button>
+              </div>
+
+                         <!-- Arrow Navigation Card -->
+              <div class="hint-card">
+                  <div class="hint-card-header">
+                      <span class="hint-card-icon">↕️</span>
+                      <span class="hint-card-title">Arrow Navigation</span>
+                  </div>
+                  <div class="hint-card-description">Navigate through tabs using arrow keys and Enter to select.</div>
+                  <button class="hint-learn-more" data-modal="navigationHelpModal">Learn more →</button>
+              </div>
+
+          </div>
+
+
+     <div class="settings-title collapsible collapsed" id="settingsToggle">
+         <span class="collapse-icon">▼</span>
+         Settings
+         <span class="click-hint">(click to toggle)</span>
+     </div>
+     <div id="settingsCollapsibleContent" class="collapsible-content hidden">
+          <div class="split"></div>
             <div class="sections-wrapper">
-                <div class="section">
-                    <div class="section-title">Configure Main Keys </div>
+                <div class="section section-left">
+                   
+                    <div class="section-title">Configure Keys</div>
                     
                     <div class="modifier-keys-grid">
                         <div class="modifier-key-item">
-                            <label for="closeModifier">Close</label>
+                            <label for="closeModifier">Close </label>
                             <div class="key-recorder">
                                 <input type="text" id="closeModifierDisplay" readonly placeholder="Record...">
                                 <button id="recordCloseButton" class="record-button">Record</button>
@@ -440,69 +1549,939 @@
                         </div>
 
                         <div class="modifier-key-item">
-                            <label for="switchModifier">Switch</label>
+                            <label for="targetModifier">Target</label>
                             <div class="key-recorder">
-                                <input type="text" id="switchModifierDisplay" readonly placeholder="Record...">
-                                <button id="recordSwitchButton" class="record-button">Record</button>
-                                <button id="clearSwitchButton" class="clear-button">Clear</button>
+                                <input type="text" id="targetModifierDisplay" readonly placeholder="Record...">
+                                <button id="recordTargetButton" class="record-button">Record</button>
+                                <button id="clearTargetButton" class="clear-button">Clear</button>
                             </div>
-                            <div id="recordingSwitchStatus" class="recording-status"></div>
+                            <div id="recordingTargetStatus" class="recording-status"></div>
                         </div>
 
                         <div class="modifier-key-item">
-                            <label for="confirmKey">Confirm</label>
+                            <label for="engineModifier">Engine</label>
                             <div class="key-recorder">
-                                <input type="text" id="confirmKeyDisplay" readonly placeholder="Record...">
-                                <button id="recordConfirmButton" class="record-button">Record</button>
-                                <button id="clearConfirmButton" class="clear-button">Clear</button>
-                            </div>
-                            <div id="recordingConfirmStatus" class="recording-status"></div>
-                        </div>
-
-                        <div class="modifier-key-item">
-                            <label>Extension shortcut</label>
-                            <button id="openChromeShortcuts" class="record-button" style="width: 100%; padding: 12px; background: #667eea;">
-                                Open Extension Shortcuts
+                                <input type="text" id="engineModifierDisplay" readonly placeholder="Record...">
+                                <button id="recordEngineButton" class="record-button">Record</button>
+                                <button id="clearEngineButton" class="clear-button">Clear</button>
+                                <button id="manageEnginesButton" class="engine-button">
+                                Manage Search Engines 
                             </button>
+                            </div>
+                            <div id="recordingEngineStatus" class="recording-status"></div>
+
                         </div>
-                    </div>
-                </div>
 
-                <div class="section">
-                    <div class="section-title">Other Settings</div>
+                        
 
-                    <div class="shortcuts-grid">
-                        <div class="modifier-key-item">
+                               <div class="modifier-key-item">
+                            <label for="webSearchKey">Web Search</label>
+                            <div class="key-recorder">
+                                <input type="text" id="webSearchKeyDisplay" readonly placeholder="Record...">
+                                <button id="recordWebSearchButton" class="record-button">Record</button>
+                                <button id="clearWebSearchButton" class="clear-button">Clear</button>
+                            </div>
+                            <div id="recordingWebSearchStatus" class="recording-status"></div>
+                            <div class="description">
+                                Force web search even when matching tabs exist
+                            </div>
+                        </div>
+
+                        
+                        <div class="modifier-key-item" id="recentlyClosedKeyItem">
                             <label for="recentlyClosedKey">Recently closed</label>
                             <div class="key-recorder">
                                 <input type="text" id="recentlyClosedKeyDisplay" readonly placeholder="Record...">
                                 <button id="recordRecentlyClosedButton" class="record-button">Record</button>
                                 <button id="clearRecentlyClosedButton" class="clear-button">Clear</button>
+                                <button id="disableRecentlyClosedButton" class="record-button disable-button">Disable</button>
                             </div>
                             <div id="recordingRecentlyClosedStatus" class="recording-status"></div>
                         </div>
 
-                        <div class="modifier-key-item">
-                            <label for="settingsKey">Settings</label>
+                        <div class="modifier-key-item" id="forceSearchKeyItem">
+                            <label for="forceSearchKey">Toggle Suggestions</label>
                             <div class="key-recorder">
-                                <input type="text" id="settingsKeyDisplay" readonly placeholder="Record...">
-                                <button id="recordSettingsButton" class="record-button">Record</button>
-                                <button id="clearSettingsButton" class="clear-button">Clear</button>
+                                <input type="text" id="forceSearchKeyDisplay" readonly placeholder="Record...">
+                                <button id="recordForceSearchButton" class="record-button">Record</button>
+                                <button id="clearForceSearchButton" class="clear-button">Clear</button>
+                                <button id="disableForceSearchButton" class="record-button disable-button">Disable</button>
                             </div>
-                            <div id="recordingSettingsStatus" class="recording-status"></div>
+                            <div id="recordingForceSearchStatus" class="recording-status"></div>
+                            <div class="description">
+                                Toggle between tabs view and search suggestions
+                            </div>
                         </div>
 
                         <div class="modifier-key-item">
-                            <label>
-                                <input type="checkbox" id="showInstructions" checked>
-                                Show shortcuts
-                            </label>
-                            <div class="description">
-                                Display keyboard shortcuts hint below search box
+                            <label>Extension shortcut</label>
+                            <button id="openChromeShortcuts" class="record-button" style="width: 100%; padding: 6px; background: #667eea; font-size: 10px;">
+                                Open Shortcuts
+                            </button>
+                               <div class="description">
                             </div>
                         </div>
                     </div>
 
+                    <!-- Services Section -->
+                    <div style="margin-top: 12px; padding-top: 8px; border-top: 1px solid #e2e8f0;">
+                        <div class="section-title">Services</div>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px;">
+                            <button id="manageWeatherButton" class="settings-button compact weather">
+                                🌤️ Weather
+                            </button>
+                            <button id="manageCurrencyButton" class="settings-button compact currency">
+                                💱 Currency
+                            </button>
+                            <button id="manageTranslationButton" class="settings-button compact translation">
+                                🌐 Translate
+                            </button>
+                            <button id="manageDefinitionButton" class="settings-button compact" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+                                📖 Define
+                            </button>
+                        </div>
+
+                        <!-- Service Prefix Selector -->
+                        <div style="margin-top: 10px;">
+                            <label style="font-weight:600; font-size:11px; display:block; margin-bottom:5px; color:#2d3748;">Service Prefix Character</label>
+                            <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                                <label class="svc-prefix-opt" id="svcpfx-sq"  style="display:flex;align-items:center;gap:3px;cursor:pointer;padding:4px 10px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;font-family:monospace;font-size:13px;font-weight:400;">
+                                    <input type="radio" name="servicePrefix" value="'" style="display:none;"> '
+                                </label>
+                                <label class="svc-prefix-opt" id="svcpfx-dot" style="display:flex;align-items:center;gap:3px;cursor:pointer;padding:4px 10px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;font-family:monospace;font-size:13px;font-weight:400;">
+                                    <input type="radio" name="servicePrefix" value="." style="display:none;"> .
+                                </label>
+                                <label class="svc-prefix-opt" id="svcpfx-exc" style="display:flex;align-items:center;gap:3px;cursor:pointer;padding:4px 10px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;font-family:monospace;font-size:13px;font-weight:400;">
+                                    <input type="radio" name="servicePrefix" value="!" style="display:none;"> !
+                                </label>
+                                <label class="svc-prefix-opt" id="svcpfx-qst" style="display:flex;align-items:center;gap:3px;cursor:pointer;padding:4px 10px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;font-family:monospace;font-size:13px;font-weight:400;">
+                                    <input type="radio" name="servicePrefix" value="?" style="display:none;"> ?
+                                </label>
+                                <label class="svc-prefix-opt" id="svcpfx-dq"  style="display:flex;align-items:center;gap:3px;cursor:pointer;padding:4px 10px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;font-family:monospace;font-size:13px;font-weight:400;">
+                                    <input type="radio" name="servicePrefix" value='"' style="display:none;"> "
+                                </label>
+                            </div>
+                            <div class="description" style="margin-top:4px;">
+                                The leading character for all service shortcuts — e.g. <strong id="svcPrefixExample">'w</strong> for weather, <strong id="svcPrefixExampleT">'e</strong> for translation.
+                                Changing this remaps all your existing prefixes automatically.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section section-right">
+                    <div class="section-title">Other Settings</div>
+
+                    <div class="modifier-keys-grid">
+                                             <button id="manageEnginesButton" class="engine-button">
+                                Manage Search Engines 
+                            </button>
+
+                    </div>
+
+                    <!-- Groq API Key -->
+                    <div style="margin-top: 12px; padding-top: 8px; border-top: 1px solid #e2e8f0;">
+                        <div class="section-title">🤖 AI Integration (Optional)</div>
+                        <div class="modifier-key-item" style="margin-bottom: 8px;">
+                            <label style="font-weight: 600; margin-bottom: 4px; display: block;">Groq API Key</label>
+                            <div style="display: flex; gap: 6px; align-items: center;">
+                                <input type="password" id="groqApiKey" placeholder="gsk_..." autocomplete="off"
+                                    style="flex:1; padding:6px 8px; border:1px solid #e2e8f0; border-radius:6px; font-size:11px; font-family:monospace;">
+                                <button id="toggleGroqKeyVisibility"
+                                    style="padding:5px 8px; background:#e2e8f0; border:none; border-radius:6px; cursor:pointer; font-size:11px; white-space:nowrap;">
+                                    Show
+                                </button>
+                                <button id="saveGroqApiKey"
+                                    style="padding:5px 10px; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:white; border:none; border-radius:6px; cursor:pointer; font-size:11px; white-space:nowrap;">
+                                    Save
+                                </button>
+                            </div>
+                            <div class="description" style="margin-top:4px;">
+                                Powers inline AI answers. Get your free key at
+                                <a href="https://console.groq.com/keys" target="_blank"
+                                   style="color:#667eea; font-weight:600;">console.groq.com/keys</a>
+                            </div>
+                            <div id="groqApiKeySavedMsg" style="display:none; font-size:10px; color:#38a169; margin-top:3px;">✅ Key saved!</div>
+                        </div>
+
+                        <div class="modifier-key-item" style="margin-top:8px;">
+                            <label style="font-weight:600; margin-bottom:4px; display:block;">AI Trigger Suffix</label>
+                            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:4px;">
+                                <label class="ai-trigger-option" id="aitrig-sq" style="display:flex;align-items:center;gap:4px;font-weight:400;cursor:pointer;padding:5px 10px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;font-family:monospace;font-size:12px;">
+                                    <input type="radio" name="aiTrigger" value="''"> ''
+                                </label>
+                                <label class="ai-trigger-option" id="aitrig-dq" style="display:flex;align-items:center;gap:4px;font-weight:400;cursor:pointer;padding:5px 10px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;font-family:monospace;font-size:12px;">
+                                    <input type="radio" name="aiTrigger" value='""'> ""
+                                </label>
+                                <label class="ai-trigger-option" id="aitrig-dots" style="display:flex;align-items:center;gap:4px;font-weight:400;cursor:pointer;padding:5px 10px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;font-family:monospace;font-size:12px;">
+                                    <input type="radio" name="aiTrigger" value=".."> ..
+                                </label>
+                                <label class="ai-trigger-option" id="aitrig-exc" style="display:flex;align-items:center;gap:4px;font-weight:400;cursor:pointer;padding:5px 10px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;font-family:monospace;font-size:12px;">
+                                    <input type="radio" name="aiTrigger" value="!!"> !!
+                                </label>
+                                <label class="ai-trigger-option" id="aitrig-qq" style="display:flex;align-items:center;gap:4px;font-weight:400;cursor:pointer;padding:5px 10px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;font-family:monospace;font-size:12px;">
+                                    <input type="radio" name="aiTrigger" value="??"> ??
+                                </label>
+                            </div>
+                            <div class="description">End your query with this suffix (or always <strong>?</strong>) to trigger an AI answer.</div>
+                        </div>
+                    </div>
+
+                    <!-- General Settings (inline) -->
+                    <div style="margin-top: 12px; padding-top: 8px; border-top: 1px solid #e2e8f0;">
+                        <div class="modifier-keys-grid">
+                            <div class="modifier-key-item">
+                                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                                    <input type="checkbox" id="showInstructions" checked>
+                                    Show shortcuts
+                                </label>
+                                <div class="description">Display keyboard shortcuts hint below search box</div>
+                            </div>
+
+                            <div class="modifier-key-item">
+                                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                                    <input type="checkbox" id="prioritizeHotPage" checked>
+                                    Prioritize hot page
+                                </label>
+                                <div class="description">Always go to the hot page with web search key</div>
+                            </div>
+
+                                  <div class="modifier-key-item">
+                                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                                    <input type="checkbox" id="animations" checked>
+                                    animate tab list
+                                </label>
+                                <div class="description">smoother but appears slightly slower</div>
+                            </div>
+
+                            <div class="modifier-key-item">
+                                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                                    <input type="checkbox" id="onlySearchClosedWhenJumped">
+                                    Only search recently closed when jumped to first
+                                </label>
+                                <div class="description">Recently closed tabs only appear after pressing Tab key first</div>
+                            </div>
+
+                            <div class="modifier-key-item">
+                                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                                    <input type="checkbox" id="useTopSitesAsHotPages" checked>
+                                    Use top sites as hot pages
+                                </label>
+                                <div class="description">Include most visited sites as hot pages</div>
+                            </div>
+
+                            <div class="modifier-key-item">
+                                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                                    <input type="checkbox" id="enableInstantJump" checked>
+                                    Enable instant jump
+                                </label>
+                                <div class="description">Jump directly to a tab by holding the engine key and pressing its domain's first letter</div>
+                            </div>
+
+                            <div class="modifier-key-item">
+                                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                                    <input type="checkbox" id="enableSearchHistory" checked>
+                                    Enable search history
+                                </label>
+                                <div class="description">Save last 10 searches. Press Close key to cycle through</div>
+                            </div>
+
+                            <div class="modifier-key-item">
+                                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                                    <input type="checkbox" id="showClock" checked>
+                                    Show clock in search bar
+                                </label>
+                                <div class="description">Display current time in the search bar</div>
+                            </div>
+
+                            <!-- Default Search Engine -->
+                            <div class="modifier-key-item" style="grid-column: span 2;">
+                                <label style="font-weight: 600; margin-bottom: 6px; display: block;">Default Search Engine</label>
+                                <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
+                                    <label style="display:flex;align-items:center;gap:4px;font-weight:400;cursor:pointer;padding:5px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;" id="engine-radio-ddg">
+                                        <input type="radio" name="defaultSearchEngine" value="ddg"> DuckDuckGo
+                                    </label>
+                                    <label style="display:flex;align-items:center;gap:4px;font-weight:400;cursor:pointer;padding:5px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;" id="engine-radio-brave">
+                                        <input type="radio" name="defaultSearchEngine" value="brave"> Brave Search
+                                    </label>
+                                    <label style="display:flex;align-items:center;gap:4px;font-weight:400;cursor:pointer;padding:5px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;" id="engine-radio-google">
+                                        <input type="radio" name="defaultSearchEngine" value="google"> Google
+                                    </label>
+                                    <label style="display:flex;align-items:center;gap:4px;font-weight:400;cursor:pointer;padding:5px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;" id="engine-radio-startpage">
+                                        <input type="radio" name="defaultSearchEngine" value="startpage"> StartPage
+                                    </label>
+                                    <label style="display:flex;align-items:center;gap:4px;font-weight:400;cursor:pointer;padding:5px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#f7fafc;" id="engine-radio-custom">
+                                        <input type="radio" name="defaultSearchEngine" value="custom"> Custom
+                                    </label>
+                                </div>
+                                <div id="customSearchEngineRow" style="display:none; margin-top:4px;">
+                                    <input type="url" id="customSearchEngineUrl" placeholder="https://example.com/search?q=" style="width:100%;padding:6px 8px;border:1px solid #e2e8f0;border-radius:6px;font-size:11px;">
+                                    <div class="description" style="margin-top:2px;">URL must end at the query parameter (e.g. <code>https://example.com/search?q=</code>)</div>
+                                </div>
+                                <div class="description">Used when you search without selecting a specific engine</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 8px;">
+                            <label style="font-weight: 600; margin-bottom: 6px; display: block;">Hot Pages Import/Export</label>
+                            <div style="display: flex; gap: 6px;">
+                                <button id="exportHotPages" style="padding: 6px 12px; background: #0ea5e9; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: 500;">Export JSON</button>
+                                <button id="importHotPagesBtn" style="padding: 6px 12px; background: #22c55e; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: 500;">Import JSON</button>
+                                <input type="file" id="importHotPagesFile" accept=".json" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     </div>
+        </div>
+    </div>
+
+    <!-- Engine Manager Modal -->
+    <div id="engineModal" class="engine-modal">
+        <div class="engine-modal-content">
+            <div class="engine-modal-header">
+                <h2>Manage Search Engines</h2>
+                <button class="engine-close-btn" id="closeEngineModal">&times;</button>
+            </div>
+            <div class="engine-modal-body">
+                <!-- Description box -->
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+                    <div style="font-size: 13px; color: #0369a1; line-height: 1.5;">
+                        <strong>🔧 Customize Your Search Engines</strong><br>
+                        <span style="color: #475569;">
+                        Edit existing engines or create new ones. Run out of keys? Use <strong>modifier keys</strong> (Shift, Ctrl, Alt) 
+                        to assign multiple engines to the same letter — e.g., <kbd style="background: #e2e8f0; padding: 1px 5px; border-radius: 3px; font-size: 11px;">F21+G</kbd> for Google 
+                        and <kbd style="background: #e2e8f0; padding: 1px 5px; border-radius: 3px; font-size: 11px;">F21+Shift+G</kbd> for Google Images.
+                    </span>
+                    <br>
+                    <strong style="color: #f59e0b;">💡 Hint:</strong>
+                    <br>
+                    <span style="color: #64748b; font-size: 12px;">
+                        Figure out the URL by making a search and removing your test phrase from the URL. Some engines require a suffix after the query.
+                    </span>
+                    </div>
+                </div>
+
+                <div class="engine-add-section">
+                    <h3 style="margin: 0 0 6px 0; color: #0ea5e9; font-size: 16px;">Add New Search Engine</h3>
+                    
+                    <div class="engine-form">
+                        <div>
+                            <label for="engineName">Engine Name</label>
+                            <input type="text" id="engineName" placeholder="e.g., Google Images" maxlength="30">
+                        </div>
+                        <div>
+                            <label for="engineUrl">Search URL (prefix)</label>
+                            <input type="url" id="engineUrl" placeholder="https://example.com/search?q=" maxlength="500">
+                        </div>
+                        <div>
+                            <label for="engineKey">Key</label>
+                            <input type="text" id="engineKey" placeholder="G" maxlength="1" style="text-transform: uppercase;">
+                        </div>
+                        <div>
+                            <label for="engineUrlSuffix">URL Suffix (optional)</label>
+                            <input type="text" id="engineUrlSuffix" placeholder="e.g. &param=value" maxlength="200">
+                        </div>
+                        <div>
+                            <label>Modifier Key (optional)</label>
+                            <div class="modifier-input-group">
+                                <input type="text" id="engineModifierKeyDisplay" placeholder="None" readonly>
+                                <button type="button" class="record-modifier-btn" id="recordEngineModifierBtn">Record</button>
+                                <button type="button" class="clear-modifier-btn" id="clearEngineModifierBtn">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <button class="engine-add-btn" id="addEngineBtn">Add Engine</button>
+                    </div>
+                    <div style="margin-top: 6px; font-size: 11px; color: #64748b;">
+                        <strong>URL Format:</strong> URL = prefix + search query + suffix.
+                        <strong>Example:</strong> prefix: https://google.com/search?q= | suffix: &hl=en
+                        <strong>Shortcut:</strong> <span id="engineShortcutPreview">Ctrl+[Key]</span>
+                    </div>
+                </div>
+
+                <div class="engines-list" id="enginesList">
+                    <!-- Engines will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Weather Locations Modal -->
+    <div id="weatherModal" class="settings-modal">
+        <div class="settings-modal-content">
+            <div class="settings-modal-header weather">
+                <h2>🌤️ Weather Locations</h2>
+                <button class="settings-modal-close" id="closeWeatherModal">&times;</button>
+            </div>
+            <div class="settings-modal-body">
+                <div class="description" style="margin-bottom: 16px;">
+                    Configure locations for weather shortcuts. Use the service prefix followed by a letter, then optionally a time offset (e.g. <span id="weatherPrefixExample">'w</span> 2d for 2 days ahead, <span id="weatherPrefixExampleMon">'w</span> mon for next Monday).
+                </div>
+                <div id="weatherLocationsList" style="margin-bottom: 16px;"></div>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+                    <input type="text" id="newWeatherPrefix" placeholder="'w" style="width: 60px; padding: 8px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px;">
+                    <input type="text" id="newWeatherName" placeholder="Location name" style="width: 120px; padding: 8px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px;">
+                    <input type="text" id="newWeatherLat" placeholder="Latitude" style="width: 90px; padding: 8px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px;">
+                    <input type="text" id="newWeatherLon" placeholder="Longitude" style="width: 90px; padding: 8px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px;">
+                    <button id="addWeatherLocation" style="padding: 8px 16px; background: #22c55e; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 14px;">Add</button>
+                </div>
+                <div class="description" style="margin-top: 12px;">
+                    Prefix must start with the service prefix character (e.g., <span id="weatherPrefixNote">'w</span>, <span id="weatherPrefixNoteT">'t</span>). Find coordinates at <a href="https://www.latlong.net/" target="_blank" style="color: #667eea;">latlong.net</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Currency Conversion Modal -->
+    <div id="currencyModal" class="settings-modal">
+        <div class="settings-modal-content">
+            <div class="settings-modal-header currency">
+                <h2>💱 Currency Conversion</h2>
+                <button class="settings-modal-close" id="closeCurrencyModal">&times;</button>
+            </div>
+            <div class="settings-modal-body">
+                <div class="description" style="margin-bottom: 16px;">
+                    Configure up to 10 target currencies for auto-conversion. When you type e.g. "20 SEK", it will convert to these currencies. Typing "10 SEK to USD" still works for specific conversions.
+                </div>
+                <div id="currencyList" style="margin-bottom: 16px;"></div>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                    <select id="newCurrencySelect" style="width: 200px; padding: 8px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px;">
+                        <option value="">Select currency...</option>
+                        <option value="USD">USD - US Dollar</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="GBP">GBP - British Pound</option>
+                        <option value="NOK">NOK - Norwegian Krone</option>
+                        <option value="SEK">SEK - Swedish Krona</option>
+                        <option value="DKK">DKK - Danish Krone</option>
+                        <option value="CHF">CHF - Swiss Franc</option>
+                        <option value="JPY">JPY - Japanese Yen</option>
+                        <option value="CAD">CAD - Canadian Dollar</option>
+                        <option value="AUD">AUD - Australian Dollar</option>
+                        <option value="NZD">NZD - New Zealand Dollar</option>
+                        <option value="CNY">CNY - Chinese Yuan</option>
+                        <option value="INR">INR - Indian Rupee</option>
+                        <option value="BRL">BRL - Brazilian Real</option>
+                        <option value="MXN">MXN - Mexican Peso</option>
+                        <option value="PLN">PLN - Polish Zloty</option>
+                        <option value="CZK">CZK - Czech Koruna</option>
+                        <option value="HUF">HUF - Hungarian Forint</option>
+                        <option value="RON">RON - Romanian Leu</option>
+                        <option value="BGN">BGN - Bulgarian Lev</option>
+                        <option value="ISK">ISK - Icelandic Króna</option>
+                        <option value="HRK">HRK - Croatian Kuna</option>
+                        <option value="RUB">RUB - Russian Ruble</option>
+                        <option value="TRY">TRY - Turkish Lira</option>
+                        <option value="ZAR">ZAR - South African Rand</option>
+                        <option value="KRW">KRW - South Korean Won</option>
+                        <option value="SGD">SGD - Singapore Dollar</option>
+                        <option value="HKD">HKD - Hong Kong Dollar</option>
+                        <option value="THB">THB - Thai Baht</option>
+                        <option value="MYR">MYR - Malaysian Ringgit</option>
+                        <option value="IDR">IDR - Indonesian Rupiah</option>
+                        <option value="PHP">PHP - Philippine Peso</option>
+                        <option value="ILS">ILS - Israeli Shekel</option>
+                    </select>
+                    <button id="addCurrency" style="padding: 8px 16px; background: #22c55e; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 14px;">Add</button>
+                </div>
+                <div class="description" style="margin-top: 12px;">
+                    Maximum 10 currencies. The source currency is automatically excluded from results.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Translation Settings Modal -->
+    <div id="translationModal" class="settings-modal">
+        <div class="settings-modal-content">
+            <div class="settings-modal-header translation">
+                <h2>🌐 Translation Settings</h2>
+                <button class="settings-modal-close" id="closeTranslationModal">&times;</button>
+            </div>
+            <div class="settings-modal-body">
+                <!-- Source Language Prefixes -->
+                <div style="margin-bottom: 24px;">
+                    <h3 style="margin: 0 0 8px 0; font-size: 16px; color: #1a202c;">Source Language Shortcuts</h3>
+                    <div class="description" style="margin-bottom: 12px;">
+                        Define prefixes to translate FROM a language (e.g., <span class="svc-pfx-eg">'e</span> for English). Use <span class="svc-pfx-eg">'a</span> for auto-detect.
+                    </div>
+                    <div id="translationPrefixList" style="margin-bottom: 12px;"></div>
+                    <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                        <input type="text" id="newTranslationPrefix" placeholder="'e" style="width: 60px; padding: 8px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px;">
+                        <select id="newTranslationPrefixLang" style="width: 180px; padding: 8px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px;">
+                            <option value="">Select language...</option>
+                            <option value="auto">🔍 Auto-detect</option>
+                            <option value="en">🇬🇧 English</option>
+                            <option value="de">🇩🇪 German</option>
+                            <option value="no">🇳🇴 Norwegian</option>
+                            <option value="es">🇪🇸 Spanish</option>
+                            <option value="fr">🇫🇷 French</option>
+                            <option value="it">🇮🇹 Italian</option>
+                            <option value="pt">🇵🇹 Portuguese</option>
+                            <option value="nl">🇳🇱 Dutch</option>
+                            <option value="pl">🇵🇱 Polish</option>
+                            <option value="ru">🇷🇺 Russian</option>
+                            <option value="ja">🇯🇵 Japanese</option>
+                            <option value="zh">🇨🇳 Chinese</option>
+                            <option value="ko">🇰🇷 Korean</option>
+                            <option value="ar">🇸🇦 Arabic</option>
+                            <option value="hi">🇮🇳 Hindi</option>
+                            <option value="tr">🇹🇷 Turkish</option>
+                            <option value="sv">🇸🇪 Swedish</option>
+                            <option value="da">🇩🇰 Danish</option>
+                            <option value="fi">🇫🇮 Finnish</option>
+                            <option value="cs">🇨🇿 Czech</option>
+                            <option value="el">🇬🇷 Greek</option>
+                            <option value="he">🇮🇱 Hebrew</option>
+                            <option value="th">🇹🇭 Thai</option>
+                            <option value="vi">🇻🇳 Vietnamese</option>
+                            <option value="uk">🇺🇦 Ukrainian</option>
+                            <option value="ro">🇷🇴 Romanian</option>
+                            <option value="hu">🇭🇺 Hungarian</option>
+                            <option value="id">🇮🇩 Indonesian</option>
+                        </select>
+                        <button id="addTranslationPrefix" style="padding: 8px 16px; background: #22c55e; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 14px;">Add</button>
+                    </div>
+                </div>
+
+                <!-- Target Languages -->
+                <div>
+                    <h3 style="margin: 0 0 8px 0; font-size: 16px; color: #1a202c;">Target Languages</h3>
+                    <div class="description" style="margin-bottom: 12px;">
+                        Languages to translate TO (up to 5). The source language is automatically excluded.
+                    </div>
+                    <div id="translationTargetList" style="margin-bottom: 12px;"></div>
+                    <div style="display: flex; gap: 8px; align-items: center;">
+                        <select id="newTranslationTarget" style="width: 180px; padding: 8px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px;">
+                            <option value="">Select language...</option>
+                            <option value="en">🇬🇧 English</option>
+                            <option value="de">🇩🇪 German</option>
+                            <option value="no">🇳🇴 Norwegian</option>
+                            <option value="es">🇪🇸 Spanish</option>
+                            <option value="fr">🇫🇷 French</option>
+                            <option value="it">🇮🇹 Italian</option>
+                            <option value="pt">🇵🇹 Portuguese</option>
+                            <option value="nl">🇳🇱 Dutch</option>
+                            <option value="pl">🇵🇱 Polish</option>
+                            <option value="ru">🇷🇺 Russian</option>
+                            <option value="ja">🇯🇵 Japanese</option>
+                            <option value="zh">🇨🇳 Chinese</option>
+                            <option value="ko">🇰🇷 Korean</option>
+                            <option value="ar">🇸🇦 Arabic</option>
+                            <option value="hi">🇮🇳 Hindi</option>
+                            <option value="tr">🇹🇷 Turkish</option>
+                            <option value="sv">🇸🇪 Swedish</option>
+                            <option value="da">🇩🇰 Danish</option>
+                            <option value="fi">🇫🇮 Finnish</option>
+                            <option value="cs">🇨🇿 Czech</option>
+                            <option value="el">🇬🇷 Greek</option>
+                            <option value="he">🇮🇱 Hebrew</option>
+                            <option value="th">🇹🇭 Thai</option>
+                            <option value="vi">🇻🇳 Vietnamese</option>
+                            <option value="uk">🇺🇦 Ukrainian</option>
+                            <option value="ro">🇷🇴 Romanian</option>
+                            <option value="hu">🇭🇺 Hungarian</option>
+                            <option value="id">🇮🇩 Indonesian</option>
+                        </select>
+                        <button id="addTranslationTarget" style="padding: 8px 16px; background: #22c55e; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 14px;">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Definition Settings Modal -->
+    <div id="definitionModal" class="settings-modal">
+        <div class="settings-modal-content">
+            <div class="settings-modal-header" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+                <h2>📖 Definition Settings</h2>
+                <button class="settings-modal-close" id="closeDefinitionModal">&times;</button>
+            </div>
+            <div class="settings-modal-body">
+                <div class="description" style="margin-bottom: 16px;">
+                    Define prefixes to look up word definitions in different languages (e.g., <span class="svc-pfx-eg">'d</span> for English, <span class="svc-pfx-eg">'de</span> for German). Supported languages: English, Spanish, French, German, Italian, Portuguese, Russian, Japanese, Korean, Arabic, Turkish, Hindi.
+                </div>
+                <div id="definitionPrefixList" style="margin-bottom: 12px;"></div>
+                <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                    <input type="text" id="newDefinitionPrefix" placeholder="'d" style="width: 60px; padding: 8px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px;">
+                    <select id="newDefinitionLang" style="width: 180px; padding: 8px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px;">
+                        <option value="">Select language...</option>
+                        <option value="en">🇬🇧 English</option>
+                        <option value="es">🇪🇸 Spanish</option>
+                        <option value="fr">🇫🇷 French</option>
+                        <option value="de">🇩🇪 German</option>
+                        <option value="it">🇮🇹 Italian</option>
+                        <option value="pt">🇵🇹 Portuguese</option>
+                        <option value="ru">🇷🇺 Russian</option>
+                        <option value="ja">🇯🇵 Japanese</option>
+                        <option value="ko">🇰🇷 Korean</option>
+                        <option value="ar">🇸🇦 Arabic</option>
+                        <option value="tr">🇹🇷 Turkish</option>
+                        <option value="hi">🇮🇳 Hindi</option>
+                    </select>
+                    <button id="addDefinitionPrefix" style="padding: 8px 16px; background: #22c55e; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 14px;">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hotkeys Help Modal -->
+    <div id="hotkeysHelpModal" class="help-modal">
+        <div class="help-modal-content">
+            <div class="help-modal-header">
+                <h3><span>⌨️</span> Hotkeys</h3>
+                <button class="help-modal-close">&times;</button>
+            </div>
+            <div class="help-modal-body">
+                <div class="help-section">
+                    <div class="help-section-title">📌 What are Hotkeys?</div>
+                    <div class="help-section-content">
+                        Hotkeys allow you to instantly switch to or close any visible tab using letter keys. Each tab in the list is assigned a letter from <span class="help-key">A</span> to <span class="help-key">R</span>.
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">🎯 How to Use</div>
+                    <div class="help-section-content">
+                        <ul>
+                            <li><strong>Switch to a tab:</strong> Hold <span class="help-key">Target</span> (default: Alt) + press the letter key</li>
+                            <li><strong>Close a tab:</strong> Hold <span class="help-key">Close</span> (default: Shift) + press the letter key</li>
+                            <li><strong>Close highlighted tab:</strong> Hold <span class="help-key">Target</span> + <span class="help-key">Close</span> together</li>
+                        </ul>
+                        <div class="help-example">
+                            <div class="help-example-label">Example:</div>
+                            <span class="help-key">Alt</span> + <span class="help-key">A</span> → Switch to the first tab<br>
+                            <span class="help-key">Shift</span> + <span class="help-key">D</span> → Close the fourth tab
+                        </div>
+                    </div>
+                </div>
+                <div class="help-tip">
+                    <strong>💡 Tip:</strong> You can customize the Target and Close modifier keys in the Settings section below.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Favorites Help Modal -->
+    <div id="favoritesHelpModal" class="help-modal">
+        <div class="help-modal-content">
+            <div class="help-modal-header">
+                <h3><span>⭐</span> Favorites</h3>
+                <button class="help-modal-close">&times;</button>
+            </div>
+            <div class="help-modal-body">
+                <div class="help-section">
+                    <div class="help-section-title">📌 What are Favorites?</div>
+                    <div class="help-section-content">
+                        Favorites (also called Pinned Sites) are your most frequently visited pages that appear at the top of the popup. They can be accessed instantly using number keys.
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">🎯 How to Use</div>
+                    <div class="help-section-content">
+                        <ul>
+                            <li><strong>Add to favorites:</strong> Click the ⭐ star icon next to any tab</li>
+                            <li><strong>Open a favorite:</strong> Press <span class="help-key">1</span> - <span class="help-key">9</span> when the search field is empty</li>
+                            <li><strong>Remove a favorite:</strong> Hover over a pinned item and click the × button</li>
+                        </ul>
+                        <div class="help-example">
+                            <div class="help-example-label">Example:</div>
+                            Press <span class="help-key">1</span> → Opens your first pinned site<br>
+                            Press <span class="help-key">3</span> → Opens your third pinned site
+                        </div>
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">🔥 Hot Pages</div>
+                    <div class="help-section-content">
+                        Hot Pages work similarly but are specifically used when performing web searches. Click the 🔥 icon to mark a tab as a hot page. When you search, results will open in that page.
+                    </div>
+                </div>
+                <div class="help-tip">
+                    <strong>💡 Tip:</strong> Use Export/Import JSON in settings to backup your favorites.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Field Help Modal -->
+    <div id="searchHelpModal" class="help-modal">
+        <div class="help-modal-content">
+            <div class="help-modal-header">
+                <h3><span>🔍</span> Search Field</h3>
+                <button class="help-modal-close">&times;</button>
+            </div>
+            <div class="help-modal-body">
+                <div class="help-section">
+                    <div class="help-section-title">📌 What is the Search Field?</div>
+                    <div class="help-section-content">
+                        The search field at the top filters your open tabs in real-time. It also supports special prefixes for services and can trigger web searches.
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">🎯 How to Use</div>
+                    <div class="help-section-content">
+                        <ul>
+                            <li><strong>Filter tabs:</strong> Just start typing to filter matching tabs</li>
+                            <li><strong>Web search:</strong> Press <span class="help-key">Web Search</span> key (default: Enter) when no tabs match</li>
+                            <li><strong>Force web search:</strong> Hold <span class="help-key">Web Search</span> key even when tabs match</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">↩ Recently Closed Tabs</div>
+                    <div class="help-section-content">
+                        The <span class="help-key">↩</span> icon appears in the search bar. Press <span class="help-key">Tab</span> (or your configured Recently Closed key) to jump to the recently closed tabs section. This lets you quickly restore tabs you've closed.
+                        <div class="help-example">
+                            <div class="help-example-label">Example:</div>
+                            Press <span class="help-key">Tab</span> → Jump to recently closed tabs<br>
+                            Navigate with arrows and press <span class="help-key">Enter</span> to restore
+                        </div>
+                    </div>
+                </div>
+                <div class="help-tip">
+                    <strong>💡 Tip:</strong> Use the Toggle Suggestions key to switch between tab view and search suggestions.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Engines Help Modal -->
+    <div id="enginesHelpModal" class="help-modal">
+        <div class="help-modal-content">
+            <div class="help-modal-header">
+                <h3><span>🚀</span> Search Engines</h3>
+                <button class="help-modal-close">&times;</button>
+            </div>
+            <div class="help-modal-body">
+                <div class="help-section">
+                    <div class="help-section-title">📌 What are Search Engines?</div>
+                    <div class="help-section-content">
+                        Search Engines allow you to quickly search with different providers (Google, YouTube, DuckDuckGo, etc.) using keyboard shortcuts.
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">🎯 How to Use</div>
+                    <div class="help-section-content">
+                        <ul>
+                            <li><strong>Search with engine:</strong> Type your query, then hold <span class="help-key">Engine</span> key + letter</li>
+                            <li><strong>Manage engines:</strong> Click "Manage Search Engines" in settings</li>
+                            <li><strong>Add custom engines:</strong> Use any search URL with <code>{query}</code> as placeholder</li>
+                        </ul>
+                        <div class="help-example">
+                            <div class="help-example-label">Example:</div>
+                            Type "cats" → Hold <span class="help-key">F21</span> + <span class="help-key">G</span> → Search Google for "cats"<br>
+                            Type "music" → Hold <span class="help-key">F21</span> + <span class="help-key">Y</span> → Search YouTube for "music"
+                        </div>
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">⚡ Using Modifiers</div>
+                    <div class="help-section-content">
+                        You can assign multiple engines to the same letter using modifier keys:
+                        <ul>
+                            <li><span class="help-key">F21</span> + <span class="help-key">G</span> → Google Web</li>
+                            <li><span class="help-key">F21</span> + <span class="help-key">Shift</span> + <span class="help-key">G</span> → Google Images</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="help-tip">
+                    <strong>💡 Tip:</strong> The Engine modifier key (default: F21) can be changed in settings. Use a key that doesn't conflict with other shortcuts.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Arrow Navigation Help Modal -->
+    <div id="navigationHelpModal" class="help-modal">
+        <div class="help-modal-content">
+            <div class="help-modal-header">
+                <h3><span>↕️</span> Arrow Navigation</h3>
+                <button class="help-modal-close">&times;</button>
+            </div>
+            <div class="help-modal-body">
+                <div class="help-section">
+                    <div class="help-section-title">📌 What is Arrow Navigation?</div>
+                    <div class="help-section-content">
+                        Arrow navigation lets you browse through your tab list using keyboard arrows, similar to navigating a menu.
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">🎯 Navigation Keys</div>
+                    <div class="help-section-content">
+                        <ul>
+                            <li><span class="help-key">↑</span> / <span class="help-key">↓</span> — Move selection up/down through tabs</li>
+                            <li><span class="help-key">←</span> / <span class="help-key">→</span> — Move between columns (in two-column view)</li>
+                            <li><span class="help-key">Enter</span> — Open the selected tab</li>
+                            <li><span class="help-key">Esc</span> — Close the popup</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">🔄 Combined with Modifiers</div>
+                    <div class="help-section-content">
+                        <ul>
+                            <li>Hold <span class="help-key">Target</span> while navigating to highlight without switching</li>
+                            <li>Release <span class="help-key">Target</span> to switch to the highlighted tab</li>
+                            <li>Press <span class="help-key">Close</span> while a tab is highlighted to close it</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="help-tip">
+                    <strong>💡 Tip:</strong> Arrow navigation is especially useful when you have many tabs and want to browse through them visually.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Help Modal -->
+    <div id="servicesHelpModal" class="help-modal">
+        <div class="help-modal-content">
+            <div class="help-modal-header">
+                <h3><span>🛠️</span> Services</h3>
+                <button class="help-modal-close">&times;</button>
+            </div>
+            <div class="help-modal-body">
+                <div class="help-section">
+                    <div class="help-section-title">📌 What are Services?</div>
+                    <div class="help-section-content">
+                        Services are built-in tools that provide instant information without leaving the popup. They're triggered by special prefixes in the search field.
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">🌤️ Weather</div>
+                    <div class="help-section-content">
+                        Get weather forecasts for configured locations using prefixes like <span class="help-key">'w</span> or <span class="help-key">'t</span>.
+                        <div class="help-example">
+                            <span class="help-key">'w</span> → Current weather<br>
+                            <span class="help-key">'w 3d</span> → Weather in 3 days<br>
+                            <span class="help-key">'w mon</span> → Weather next Monday
+                        </div>
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">💱 Currency</div>
+                    <div class="help-section-content">
+                        Convert currencies by typing amounts with currency codes.
+                        <div class="help-example">
+                            <span class="help-key">100 USD</span> → Convert $100 to your target currencies<br>
+                            <span class="help-key">50 EUR NOK</span> → Convert €50 to Norwegian Krone
+                        </div>
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">🌐 Translation</div>
+                    <div class="help-section-content">
+                        Translate text using prefixes like <span class="help-key">'e</span> (English), <span class="help-key">'n</span> (Norwegian), <span class="help-key">'a</span> (auto-detect).
+                        <div class="help-example">
+                            <span class="help-key">'e hello world</span> → Translate from English<br>
+                            <span class="help-key">'a bonjour</span> → Auto-detect and translate
+                        </div>
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">📖 Definition</div>
+                    <div class="help-section-content">
+                        Look up word definitions using prefix <span class="help-key">'d</span>.
+                        <div class="help-example">
+                            <span class="help-key">'d serendipity</span> → Get definition of "serendipity"
+                        </div>
+                    </div>
+                </div>
+                <div class="help-tip">
+                    <strong>💡 Tip:</strong> Configure service prefixes and options using the service buttons (🌤️ 💱 🌐 📖) in the Settings section.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Integration Help Modal -->
+    <div id="aiHelpModal" class="help-modal">
+        <div class="help-modal-content">
+            <div class="help-modal-header">
+                <h3><span>🤖</span> AI Integration</h3>
+                <button class="help-modal-close">&times;</button>
+            </div>
+            <div class="help-modal-body">
+                <div class="help-section">
+                    <div class="help-section-title">📌 What is AI Integration?</div>
+                    <div class="help-section-content">
+                        The built-in AI assistant provides quick answers to questions directly in the search popup, powered by advanced language models.
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">🎯 How to Use</div>
+                    <div class="help-section-content">
+                        Simply type your question and end it with a <span class="help-key">?</span> question mark. The AI will process your query and display an answer.
+                        <ul>
+                            <li><strong>Ask a question:</strong> Type your question ending with <span class="help-key">?</span></li>
+                            <li><strong>Alternative trigger:</strong> End your query with <span class="help-key">''</span> (two apostrophes)</li>
+                        </ul>
+                        <div class="help-example">
+                            <div class="help-example-label">Examples:</div>
+                            <span class="help-key">What is the capital of France?</span><br>
+                            <span class="help-key">How many kilometers in a mile?</span><br>
+                            <span class="help-key">Explain quantum computing''</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">⚡ Response Style</div>
+                    <div class="help-section-content">
+                        The AI is configured to give concise 1-2 sentence answers. It uses metric units and Celsius by default, and is optimized for quick factual responses.
+                    </div>
+                </div>
+                <div class="help-tip">
+                    <strong>💡 Tip:</strong> For complex questions requiring detailed answers, consider using a dedicated AI chat interface instead.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search History Help Modal -->
+    <div id="historyHelpModal" class="help-modal">
+        <div class="help-modal-content">
+            <div class="help-modal-header">
+                <h3><span>📜</span> Search History</h3>
+                <button class="help-modal-close">&times;</button>
+            </div>
+            <div class="help-modal-body">
+                <div class="help-section">
+                    <div class="help-section-title">📌 What is Search History?</div>
+                    <div class="help-section-content">
+                        Search History saves your last 10 web searches, allowing you to quickly recall and reuse previous queries.
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">🎯 How to Use</div>
+                    <div class="help-section-content">
+                        <ul>
+                            <li><strong>Recall searches:</strong> Press the <span class="help-key">Close</span> key (default: Shift) when the search field is empty</li>
+                            <li><strong>Cycle through:</strong> Keep pressing to cycle through your history</li>
+                            <li><strong>Select a search:</strong> Release the key when you see the search you want</li>
+                        </ul>
+                        <div class="help-example">
+                            <div class="help-example-label">Example:</div>
+                            Open popup → Press <span class="help-key">Shift</span> → See last search<br>
+                            Press <span class="help-key">Shift</span> again → See previous search<br>
+                            Release → Search field is filled with selected query
+                        </div>
+                    </div>
+                </div>
+                <div class="help-section">
+                    <div class="help-section-title">⚙️ Settings</div>
+                    <div class="help-section-content">
+                        <ul>
+                            <li>Enable/disable history in "Other Settings" section</li>
+                            <li>History stores up to 10 recent searches</li>
+                            <li>Only web searches are saved (not tab filters)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="help-tip">
+                    <strong>💡 Tip:</strong> Search history is especially useful for repeating searches you do regularly.
                 </div>
             </div>
         </div>
@@ -510,4 +2489,5 @@
 
     <script src="settings.js"></script>
 </body>
+
 </html>

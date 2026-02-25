@@ -1,0 +1,86 @@
+{
+  "hotPages": [
+    {
+      "favicon": "https://icons.duckduckgo.com/ip3/youtube.com.ico",
+      "title": "YouTube",
+      "url": "https://youtube.com"
+    },
+    {
+      "favicon": "https://icons.duckduckgo.com/ip3/github.com.ico",
+      "title": "GitHub",
+      "url": "https://github.com"
+    },
+    {
+      "favicon": "https://icons.duckduckgo.com/ip3/reddit.com.ico",
+      "title": "Reddit",
+      "url": "https://reddit.com"
+    },
+    {
+      "favicon": "",
+      "title": "Experiments",
+      "url": "chrome://flags/"
+    },
+    {
+      "favicon": "https://fdn.gsmarena.com/imgroot/static/favicon.ico",
+      "title": "GSMArena.com - mobile phone reviews, news, specifications and more...",
+      "url": "https://www.gsmarena.com/"
+    },
+    {
+      "favicon": "https://duck.ai/favicon.ico",
+      "title": "Duck.ai by DuckDuckGo. Private AI chat. Free.",
+      "url": "https://duck.ai/chat?q=duck+ai&t=brave"
+    },
+    {
+      "favicon": "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico",
+      "title": " Gmail",
+      "url": "https://mail.google.com/mail/u/0/#inbox"
+    },
+    {
+      "favicon": "https://www.maxgaming.no/themes/maxgaming/design/bilder/favicons/favicon.ico",
+      "title": "Gaming- og esport-butikken - MaxGaming.no",
+      "url": "https://www.maxgaming.no/"
+    },
+    {
+      "favicon": "https://lichess1.org/assets/logo/lichess-favicon-32.png",
+      "title": "Puzzles • lichess.org",
+      "url": "https://lichess.org/training"
+    },
+    {
+      "favicon": "https://mail.proton.me/assets/static/favicon.d47d3d0bef6d338e377a.svg?v=glgwlvgj2ec",
+      "title": "(25) Inbox | thomas.roscher@proton.me | Proton Mail",
+      "url": "https://mail.proton.me/u/2/inbox"
+    },
+    {
+      "favicon": "https://www.klarna.com/favicon.ico",
+      "title": "Betal slik du vil med Klarna | Klarna Norge",
+      "url": "https://www.klarna.com/no/"
+    },
+    {
+      "favicon": "https://pricespy-75b8.kxcdn.com/rfe/g/favicon.bd2c3097b6240c32b37bbb9aedd7f8ec.ico",
+      "title": "prisjakt.no",
+      "url": "https://www.prisjakt.no/"
+    },
+    {
+      "favicon": "https://icons.duckduckgo.com/ip3/mail.proton.me.ico",
+      "title": "Proton Mail",
+      "url": "https://mail.proton.me/"
+    },
+    {
+      "favicon": "https://www.ikea.com/no/no/static/favicon.838d8a3778e4d716eb72.ico",
+      "title": "Kreative innredningsideer og rimelige møbler - IKEA",
+      "url": "https://www.ikea.com/no/no/"
+    },
+    {
+      "title": "Tab Manager X - Settings",
+      "url": "chrome-extension://dnafbceibmfhinggplijbckepojkliha/settings.html"
+    },
+    {
+      "title": "Facebook – Apper på Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.facebook.katana&hl=no"
+    },
+    {
+      "title": "Overview – Home Assistant",
+      "url": "http://homeassistant.local:8123/lovelace/0"
+    }
+  ]
+}

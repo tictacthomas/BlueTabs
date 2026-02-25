@@ -6,16 +6,37 @@
   "permissions": [
     "tabs",
     "storage",
-    "sessions"
+    "scripting",
+    "sessions",
+    "topSites",
+    "downloads",
+    "system.display"
+  ],
+  "host_permissions": [
+    "https://search.brave.com/*",
+        "https://api.groq.com/*"
+  ],
+  "web_accessible_resources": [{
+    "resources": ["hotpages.json"],
+    "matches": ["<all_urls>"]
+  }],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["instant-jump.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
   ],
   "commands": {
     "toggle-switcher": {
       "suggested_key": {
-        "default": "Ctrl+Shift+X"
+        "default": "Alt+T"
       },
       "description": "Toggle Blue tabs"
     }
   },
+  
   "options_page": "settings.html",
   "background": {
     "service_worker": "background.js"
