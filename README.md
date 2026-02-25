@@ -13,18 +13,6 @@ Pin your most-visited sites to the top of the switcher for one-click access. Hot
 
 As you type a domain that matches a hot page, ghost text completes it inline with a 🔥 badge — hit the engine modifier to open it immediately.
 
-### 🧠 Instant Answers
-
-currency convertion . weather. dictionary. math results 
-
-| Query example                | What you get                                                                                    |
-| ---------------------------- | ----------------------------------------------------------------------------------------------- |
-| `100 usd`                    | Live currency conversion (USD → NOK, EUR, and more)                                             |
-| `'e bonjour`                 | Translate to English                                                                            |
-| `'d serendipity`             | Dictionary definition with phonetics                                                            |
-| Weather prefix               | Current weather for configured locations                                                        |
-| `12 * (34 + 5)`              | Instant math result — supports `+ - * / ^ %` and parentheses                                    |
-
 
 ##optional ai integration
 
@@ -32,24 +20,20 @@ a lott of us a tick of ai bein integrated into absolutely everything. if that is
 
 ### 🔍 One Bar to Rule Them All
 
-The search bar is the heart of Blue Tabs. It's not just a tab filter — it's a unified address bar, search bar, and command palette in one:
+The search bar is the heart of Blue Tabs. It's not just a tab filter — it's also like an adressbar with extra features:
 
-- **Filter open tabs** as you type, or hit `Tab` to search recently closed ones too — closing a tab is just as fast, hit your close modifier instead of Enter
-- **Type a URL or bare domain** (e.g. `github.com`) → navigates directly, no search needed
-- **Type a query** → live Brave Search suggestions appear inline; hit Enter to search with your default engine
-- **Hold the engine modifier + a letter** to instantly redirect the search to a specific engine — YouTube, Wikipedia, Google Translate, and more. All shortcuts are remappable and you can add your own custom engines
-- **Search history** → cycle through past queries with the up arrow (stores last 10)
+- **Filter tabs** for those who ave alott open an once. you can also search your recently closed tabs
+- **Make a web search or go to a domain**
+- **Directly search any engine** type your query and press to buttons to instantly search it on — YouTube, Wikipedia, Google Translate, or any engine you chose to add. 
+- **Instant Answers** you can get cureny covertions. word defenitions. translations. or 
+-  optional **Search history** → cycle through past queries with the up arrow (stores last 10)
 
-
-consume search engines
-
-name a few of the built in engines. note that there are more and that the user can configure their own. also mention a bit how the engines work. and how it is meore eficient that way 
 
 
 
 ### 🔤 Instant Jump (no popup needed)
 
-Hold your configured **Engine modifier key** and press any letter to instantly jump to a tab whose domain starts with that letter. Press the same letter again to cycle through all matching tabs.
+Hold your configured **Engine modifier key** and press any letter to instantly jump to a tab whose domain starts with that letter. like y for youtube og g for google. Press the same letter again to cycle through all matching tabs. can jump to but not from browser intarnal pages like chrome://extentions. 
 
 ### ⌨️ Fully Configurable Keyboard Shortcuts
 
@@ -58,13 +42,15 @@ Every key binding is remappable in Settings:
 
 ## Installation
 
+will be comming chrome web store soon. but for now
+
 1. Download or clone this repository.
 2. Open Chrome and navigate to `chrome://extensions`.
 3. Enable **Developer mode** (top right toggle).
 4. Click **Load unpacked** and select the `blue tabs` folder.
 5. Press `Alt+T` to open the switcher.
+6. Press the settings icon to change anny keys or setting if needed
 
-> **Note:** The default instant-jump modifier is `F21`. You can remap this to any key in the extension settings.
 
 ---
 
@@ -83,7 +69,7 @@ Click the ⚙️ icon inside the switcher or go to **Settings → Extensions →
 | `scripting`                  | Inject the instant-jump listener into pages                |
 | `topSites`                   | Optionally populate hot pages from your most visited sites |
 | `system.display`             | Center the popup window on your screen                     |
-| `https://api.groq.com/*`     | Power AI-assisted instant answers                          |
+| `https://api.groq.com/*`     | AI-assisted instant answers                                |
 | `https://search.brave.com/*` | Enable Brave Search suggestions                            |
 
 ---
