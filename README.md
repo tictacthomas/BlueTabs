@@ -54,17 +54,6 @@ Hold your configured **Engine modifier key** and press any letter to instantly j
 ### ⌨️ Fully Configurable Keyboard Shortcuts
 
 Every key binding is remappable in Settings:
-
-|Action|Default|
-|---|---|
-|Open/close switcher|`Alt+T`|
-|Close a tab|`Shift` + select|
-|Target a tab in another window|`Alt` + select|
-|Show recently closed|`Tab`|
-|Toggle search suggestions|`Ctrl`|
-|Web search|`Enter`|
-|Instant jump modifier|`F21`|
-
 ---
 
 ## Installation
