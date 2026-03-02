@@ -136,34 +136,17 @@ Uppercase letters in the config (e.g. `A`) are automatically treated as `Shift+a
 
 ---
 
-
-The rest of this section is only relevant if you want to run from source.
-
-- Windows 10 or 11
-- Python 3.8+
-- [AutoHotkey](https://www.autohotkey.com/) _(optional but strongly recommended)_
-
-### Python Dependencies
-
-```
-pip install PyQt5 pygetwindow psutil keyboard pynput pywin32 comtypes
-```
-
-For AHK integration:
-
-```
-pip install ahk
-```
-
----
-
 ## Installation
 
 Just runn the exe
 
-
 > **Tip:** Running as administrator to be abble to controll all windows.
 
+### Python Dependencies
+
+```
+pip install PyQt5 pygetwindow psutil keyboard pynput pywin32 comtypes ahk
+```
 
 ## Configuration Reference
 
