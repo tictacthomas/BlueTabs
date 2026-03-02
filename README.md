@@ -131,15 +131,11 @@ Uppercase letters in the config (e.g. `A`) are automatically treated as `Shift+a
 - Hide individual windows from the list without closing them
 - Middle mouse button and side mouse button support
 - Virtual desktop aware — only shows windows on the current desktop
-- DPI-aware, scalable UI
 - AHK integration for deep hotkey compatibility
 - System tray with quick access to settings
 
 ---
 
-## Requirements
-
-> **Just want to run it?** Download the standalone `.exe` from the releases page — no Python, no dependencies, nothing to install. Drop it in a folder alongside `config.json` and run it.
 
 The rest of this section is only relevant if you want to run from source.
 
@@ -163,30 +159,11 @@ pip install ahk
 
 ## Installation
 
-1. Clone or download this repository
-2. Install dependencies
-3. Run:
+Just runn the exe
 
-```bash
-python window_switcher.py
-```
 
-A "Window Switcher Active" notification confirms the app is running. It lives in the system tray from there.
+> **Tip:** Running as administrator to be abble to controll all windows.
 
-> **Tip:** Running as administrator improves window focus reliability across all applications, especially those that resist being brought to the foreground.
-
----
-
-## Building a Standalone Executable
-
-```bash
-pip install pyinstaller
-pyinstaller --onefile --noconsole --name WindowSwitcher window_switcher.py
-```
-
-Place `config.json` in the same folder as the resulting executable.
-
----
 
 ## Configuration Reference
 
